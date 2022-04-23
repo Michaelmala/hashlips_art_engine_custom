@@ -1,0 +1,26 @@
+{
+  "name": "Draw #14",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/4.png",
+  "dna": "d0b2c9790958294bb7d682fe08dd5807e700a91b",
+  "edition": 14,
+  "date": 1644151411767,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0002_Wings"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0013_Purple"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0018_Blue"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0002_Red_Bird"
+    }
+  ]
+}

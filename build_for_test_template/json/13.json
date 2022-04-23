@@ -1,0 +1,26 @@
+{
+  "name": "Draw #13",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/3.png",
+  "dna": "efd93b7258b644fdea350df438e384bced4c6779",
+  "edition": 13,
+  "date": 1644151411371,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0003_Grey"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0001_Happy_Pink"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0000_Paper_Flower"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0000_Owl_Cats"
+    }
+  ]
+}

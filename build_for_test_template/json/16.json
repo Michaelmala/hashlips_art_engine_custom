@@ -1,0 +1,26 @@
+{
+  "name": "Draw #16",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/6.png",
+  "dna": "7ba2bd6885b7ce6719a71a34d1ceadb260df4b0a",
+  "edition": 16,
+  "date": 1644151412569,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0005_Box"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0011_Big_Eye"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0008_Paper_Long"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0000_Owl_Cats"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Draw #20",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/10.png",
+  "dna": "a4bdec25c07db6d5171f013b8fa9d50c86618186",
+  "edition": 20,
+  "date": 1644151414142,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0003_Grey"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0019_Daisy"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0009_Brave"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0009_Rabbit"
+    }
+  ]
+}

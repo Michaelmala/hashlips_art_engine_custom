@@ -1,0 +1,26 @@
+{
+  "name": "Draw #15",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/5.png",
+  "dna": "71bc7586c693beac660315ad639aef283461cfad",
+  "edition": 15,
+  "date": 1644151412171,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0003_Grey"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0012_Moon"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0010_Black_Red"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0009_Rabbit"
+    }
+  ]
+}

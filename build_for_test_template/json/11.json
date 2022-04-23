@@ -1,0 +1,26 @@
+{
+  "name": "Draw #11",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/1.png",
+  "dna": "418047f6950d7e3ccdbb922a53517d257e6c09c4",
+  "edition": 11,
+  "date": 1644151410594,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0005_Box"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0008_Principess"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0007_Small_Red"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0004_Grey_Rabbit"
+    }
+  ]
+}

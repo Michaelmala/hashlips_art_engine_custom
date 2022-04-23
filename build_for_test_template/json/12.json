@@ -1,0 +1,26 @@
+{
+  "name": "Draw #12",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/2.png",
+  "dna": "f2eff264a128468fba1e1e602229822665ee62ad",
+  "edition": 12,
+  "date": 1644151410967,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0003_Grey"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0008_Principess"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0009_Brave"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0002_Red_Bird"
+    }
+  ]
+}

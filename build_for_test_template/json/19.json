@@ -1,0 +1,26 @@
+{
+  "name": "Draw #19",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/9.png",
+  "dna": "0b97d01db318c0f10f5b7e91a13b0f1be557bc14",
+  "edition": 19,
+  "date": 1644151413769,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0004_Brown"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0007_Flame"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0009_Brave"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0005_Bat"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Draw #17",
+  "description": "Remember to replace this description",
+  "image": "ipfs://NewUriToReplace/7.png",
+  "dna": "474dc6207cd66c93f28a036d887848f719f611f6",
+  "edition": 17,
+  "date": 1644151412976,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Background_0003_Grey"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Face_0004_Orange"
+    },
+    {
+      "trait_type": "Hairs",
+      "value": "Hairs_0000_Paper_Flower"
+    },
+    {
+      "trait_type": "Animals",
+      "value": "Animals_0007_Black_Cats"
+    }
+  ]
+}
