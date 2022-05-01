@@ -140,3 +140,11 @@ dist
 # OSX
 
 .DS_Store
+
+#Ignore build assets files
+input_check_missing_items/
+metadata_from_png_images/
+metadata_from_png_metadata/
+output_check_missing_items/
+tools_input/
+tools_output/
