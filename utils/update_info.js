@@ -12,7 +12,7 @@ const config = {
 const buildMetadataMasterFilePath = config.metadataAreShuffled ? `${basePath}/build/shuffled_json/_metadata.json` : `${basePath}/build/json/_metadata.json`;
 
 // read json data
-let rawdata = fs.readFileSync(config.metadataAreShuffled ? `${basePath}/build/shuffled_json/_metadata.json` : `${basePath}/build/json/_metadata.json`);
+let rawdata = fs.readFileSync(buildMetadataMasterFilePath);
 let data = JSON.parse(rawdata);
 
 data.forEach((item) => {
