@@ -8,6 +8,8 @@ const toBePresentItemsFilePath = `${basePath}/input_check_missing_items/to_be_pr
 
 const outputPath = `${basePath}/output_check_missing_items/`;
 
+const config = { toBePresentAsNormalNames: true };
+
 // get present items from input file
 const getPresentItems = () => {
     return new Promise((res, rej) => {
@@ -35,6 +37,23 @@ const getPresentItems = () => {
     });
 };
 
+// get present items from input file as normal names
+const getPresentItemsAsNormalNames = () => {
+    return new Promise((res, rej) => {
+        const data = fs.readFileSync(presentItemsFilePath);
+
+        csvParse.parse(data, { columns: false, trim: true }, function (err, rows) {
+            // Your CSV data is in an array of arrys passed to this callback as rows.
+            if (err) {
+                console.error(err);
+                rej(err);
+            } else {
+                res(rows[0].map((e) => e.trim()).filter((value, index, self) => self.indexOf(value) === index));
+            }
+        });
+    });
+};
+
 // get to be present items from input file
 const getToBePresentItems = () => {
     return new Promise((res, rej) => {
@@ -54,7 +73,12 @@ const getToBePresentItems = () => {
 
 // start searching missing items
 const start = async () => {
-    const presentItems = await getPresentItems();
+    let presentItems = [];
+    if (config.toBePresentAsNormalNames) {
+        presentItems = await getPresentItemsAsNormalNames();
+    } else {
+        presentItems = await getPresentItems();
+    }
     console.log('presentItems:', presentItems);
     console.log('presentItems number:', presentItems.length);
     const toBePresentItems = await getToBePresentItems();

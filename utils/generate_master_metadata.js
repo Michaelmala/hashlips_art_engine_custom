@@ -5,7 +5,7 @@ const console = require('console');
 const metadataList = [];
 
 const config = {
-    metadataAreShuffled: true, // true id the metadata files are in the "shuffled_json" path
+    metadataAreShuffled: true, // true if the metadata files are in the "shuffled_json" path
     metadataFilesHaveExtension: false, // true if the metadata files have the ".json" extension
 };
 

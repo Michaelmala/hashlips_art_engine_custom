@@ -6,10 +6,10 @@ const inputPath = `${basePath}/tools_input/`;
 const outputPath = `${basePath}/tools_output/`;
 
 //edit to read the correct file
-const filePathToRead = '/Users/michaelmalaspina/Documents/code/PicciottiNFT/ULTIMI';
+const filePathToRead = '/Users/michaelmalaspina/Documents/code/hashlips_art_engine_custom/build/shuffled_images';
 
-// can be "PATH_CONTENT_PSD_FILE_NAMES_IN_CSV" or "MERGE_MULTIPLE_CSV_FILES"
-const tool = 'PATH_CONTENT_PSD_FILE_NAMES_IN_CSV';
+// can be "PATH_CONTENT_PSD_FILE_NAMES_IN_CSV" or "PATH_CONTENT_FILE_NAMES_IN_CSV" or "MERGE_MULTIPLE_CSV_FILES" or "GET_DUPLICATES_FROM_CSV_FILE"
+const tool = 'PATH_CONTENT_FILE_NAMES_IN_CSV';
 
 // get path files names in csv format (output directory is "tools_output")
 const getPathContentPSDFileNamesInCSV = () => {
@@ -24,6 +24,17 @@ const getPathContentPSDFileNamesInCSV = () => {
         .map((e) => {
             return e.split('_')[1].split('.')[0].toLowerCase();
         });
+    const csvFile = filesNames.join(',');
+    console.log('csvFile:', csvFile);
+    fs.writeFileSync(outputPath + 'csv_file.csv', csvFile);
+    console.log('csvFile created in path:', outputPath + 'csv_file.csv');
+};
+
+// get path files names in csv format (output directory is "tools_output")
+const getPathContentFileNamesInCSVFromFiles = () => {
+    const filesNames = fs.readdirSync(filePathToRead).map((e) => {
+        return e.split('.')[0].toLowerCase();
+    });
     const csvFile = filesNames.join(',');
     console.log('csvFile:', csvFile);
     fs.writeFileSync(outputPath + 'csv_file.csv', csvFile);
@@ -53,11 +64,24 @@ const mergeMultipleCSVFiles = () => {
     console.log('\ncsvFile created in path:', outputPath + 'merged_csv_file.csv');
 };
 
+//get duplicates from csv file
+const findDuplicatedFromCSV = () => {
+    const csv = fs.readFileSync(filePathToRead, 'utf-8');
+    const csvArray = csv.split(',');
+    const toFindDuplicates = (arry) => arry.filter((item, index) => arry.indexOf(item) !== index);
+    const duplicates = toFindDuplicates(csvArray);
+    console.log('duplicates:', duplicates);
+};
+
 const start = () => {
     if (tool === 'PATH_CONTENT_PSD_FILE_NAMES_IN_CSV') {
         getPathContentPSDFileNamesInCSV();
+    } else if (tool === 'PATH_CONTENT_FILE_NAMES_IN_CSV') {
+        getPathContentFileNamesInCSVFromFiles();
     } else if (tool === 'MERGE_MULTIPLE_CSV_FILES') {
         mergeMultipleCSVFiles();
+    } else if (tool === 'GET_DUPLICATES_FROM_CSV_FILE') {
+        findDuplicatedFromCSV();
     } else {
         console.error('Please specify a valid tool name');
     }
