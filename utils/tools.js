@@ -6,10 +6,10 @@ const inputPath = `${basePath}/tools_input/`;
 const outputPath = `${basePath}/tools_output/`;
 
 //edit to read the correct file
-const filePathToRead = '/Users/michaelmalaspina/Documents/code/hashlips_art_engine_custom/build/shuffled_images';
+const filePathToRead = '/Users/michaelmalaspina/Documents/code/PicciottiNFT/Collection/Fixed collection/output_metadata/_metadata.json';
 
-// can be "PATH_CONTENT_PSD_FILE_NAMES_IN_CSV" or "PATH_CONTENT_FILE_NAMES_IN_CSV" or "MERGE_MULTIPLE_CSV_FILES" or "GET_DUPLICATES_FROM_CSV_FILE"
-const tool = 'PATH_CONTENT_FILE_NAMES_IN_CSV';
+// can be "PATH_CONTENT_PSD_FILE_NAMES_IN_CSV" or "PATH_CONTENT_FILE_NAMES_IN_CSV" or "MERGE_MULTIPLE_CSV_FILES" or "GET_DUPLICATES_FROM_CSV_FILE" or "GET_SPECIFIC_FILES_FROM_METADATA.JSON_FILE_FILTERED_BY_B/W_PRISON"
+const tool = 'GET_SPECIFIC_FILES_FROM_METADATA.JSON_FILE_FILTERED_BY_B/W_PRISON';
 
 // get path files names in csv format (output directory is "tools_output")
 const getPathContentPSDFileNamesInCSV = () => {
@@ -73,6 +73,16 @@ const findDuplicatedFromCSV = () => {
     console.log('duplicates:', duplicates);
 };
 
+//get specific files in path from _metadata.json
+const getSpecificFilesFromMetadataJsonMasterFilteredByBWPrison = () => {
+    const json = fs.readFileSync(filePathToRead);
+    const parsedJson = JSON.parse(json);
+    const filterdByPrison = parsedJson.filter((e) => e.attributes.some((att) => att.value === 'Prison B/W'));
+    for (let file of filterdByPrison) {
+        fs.copyFileSync(`/Users/michaelmalaspina/Documents/code/PicciottiNFT/Collection/Fixed collection/output/${file.picciottoId}.png`, outputPath + `${file.picciottoId}.psd`);
+    }
+};
+
 const start = () => {
     if (tool === 'PATH_CONTENT_PSD_FILE_NAMES_IN_CSV') {
         getPathContentPSDFileNamesInCSV();
@@ -82,6 +92,8 @@ const start = () => {
         mergeMultipleCSVFiles();
     } else if (tool === 'GET_DUPLICATES_FROM_CSV_FILE') {
         findDuplicatedFromCSV();
+    } else if (tool === 'GET_SPECIFIC_FILES_FROM_METADATA.JSON_FILE_FILTERED_BY_B/W_PRISON') {
+        getSpecificFilesFromMetadataJsonMasterFilteredByBWPrison();
     } else {
         console.error('Please specify a valid tool name');
     }
